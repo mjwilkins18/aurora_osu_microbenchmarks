@@ -1,5 +1,8 @@
 AUTOMAKE_OPTIONS = subdir-objects
 
+COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+          $(AM_CFLAGS) $(CFLAGS)
+
 NVCC = @NVCC@
 NVCFLAGS = -cuda -maxrregcount 32 -ccbin $(CXX) $(NVCCFLAGS)
 SUFFIXES = .cu .cpp

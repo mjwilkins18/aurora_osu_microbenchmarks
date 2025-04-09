@@ -169,8 +169,8 @@ AC_ARG_WITH([sycl],
             ],
             [AS_CASE([$with_sycl],
                      [yes|no], [],
-                     [CPPFLAGS="-I$with_sycl/compiler/latest/include -I$with_sycl/compiler/latest/include/sycl -I$with_sycl/dpcpp-ct/latest/include/dpct $CPPFLAGS"
-                      LDFLAGS="-L$with_sycl/compiler/latest/lib $LDFLAGS"])
+                     [CPPFLAGS="-fsycl -I$with_sycl/include -I$with_sycl/include/sycl -I/opt/aurora/24.180.3/updates/oneapi/dpcpp-ct/eng-20240629/include/dpct $CPPFLAGS"
+                      LDFLAGS="-fsycl -L/opt/aurora/24.180.3/spack/unified/0.8.0/install/linux-sles15-x86_64/oneapi-2024.07.30.002/mpich-4.3.0rc3-fzmrfta/lib -lmpi $LDFLAGS"])
             ])
 
 AC_ARG_ENABLE([rcclomb],
