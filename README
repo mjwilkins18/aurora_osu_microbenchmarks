@@ -1,4 +1,7 @@
 This is a copy of the OSU Microbenchmarks with changes to the build system so it works out-of-the-box on ANL Aurora.
+
+To build, run ./osu_build $(which mpicc) $(which mpicxx)
+
 Original README follows...
 
 OMB (OSU Micro-Benchmarks)
